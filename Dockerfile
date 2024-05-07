@@ -129,8 +129,7 @@ COPY --from=build-amd64 /go/src/github.com/ollama/ollama/ollama /bin/ollama
 EXPOSE 11434
 ENV OLLAMA_HOST 0.0.0.0
 
-ENTRYPOINT ["/bin/ollama"]
-CMD ["serve"]
+CMD ["/bin/ollama","serve"]
 
 FROM runtime-$TARGETARCH
 EXPOSE 11434
